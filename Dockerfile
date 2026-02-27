@@ -1,15 +1,13 @@
 FROM nginx:alpine
 
-# Remove default nginx static assets
+# Remove a página padrão do Nginx antes de copiar os nossos arquivos
 RUN rm -rf /usr/share/nginx/html/*
 
-# Copy the custom nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Copia os arquivos do site para o diretório padrão do Nginx
+COPY . /usr/share/nginx/html
 
-# Copy the static website files
-COPY . /usr/share/nginx/html/
-
-# Expose port 80
+# Expõe a porta 80
 EXPOSE 80
 
+# Inicia o Nginx
 CMD ["nginx", "-g", "daemon off;"]
