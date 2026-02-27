@@ -153,22 +153,25 @@
                     </div>
                 </div>
             </div>
-            <div class="relative h-[600px] w-full hidden lg:block">
+            <div class="relative h-[600px] w-full hidden lg:block group">
                 <!-- Masonry Grid simulated -->
-                <div class="absolute top-0 right-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl z-10">
-                    <div class="w-full h-full bg-cover bg-center"
+                <div
+                    class="absolute top-0 right-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl z-10 transition-transform duration-1000 ease-out group-hover:scale-[1.05] group-hover:-translate-y-2 group-hover:translate-x-2">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110"
                         data-alt="Detail of wooden pilates reformer equipment leather straps"
                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl2Q5O7Msd8TR1E6b6g79yKTgfE_3A1pyYFpqiecvPM8jYbkfvDqA3Pp0FD3xC3dtl4cKN52eHHQt3M-3nnWjsrR3Z6CzIgbIyAa7UO4n6j-NJgcby14SPRIkNKEa0y4DF7wiw24SmqA9ZAa4qgjKWLV4kIT8eX6yMd0f3Xb5xTZFpx4CRu8qOeM40BVowRHZaewleFxfusxg7xnLv6V1Q7VfQZN9l732kQ79QgAf69RW0a7EnNbXW5TAp2ZMUziK4_BXGHj2mmY8');">
                     </div>
                 </div>
                 <div
-                    class="absolute bottom-0 left-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl border-8 border-background-light dark:border-background-dark z-20">
-                    <div class="w-full h-full bg-cover bg-center"
+                    class="absolute bottom-0 left-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl border-8 border-background-light dark:border-background-dark z-20 transition-transform duration-1000 ease-out group-hover:scale-[1.05] group-hover:translate-y-2 group-hover:-translate-x-2">
+                    <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110"
                         data-alt="Modern clean pilates studio interior with mirrors"
                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb1oqRoP9gnbPj6crtaKW1pUyOwLMw_HrAYvgjNGBVSg7fmOrWTp7Vd2ytbmxSj0YL6ZuHyrPOz_fg8OR3iqP0kTaDks10stzHM2bf7XZFJRdZgeiAG0RUpGJRA1PaRiDfKg5GOeOfuT-V2OwIYszUpn4QoIaWilpGMUseQBOF7CU9P54u16pp0XgFNChg-n9L9u6VNBL02fSdLNO5v3A7u1tG73zuWZFqEXkFTviDqIoqycfnx4p3Q-yiDtKu-FwaEhr7zpuHme4');">
                     </div>
                 </div>
-                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl z-0"></div>
+                <div
+                    class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl z-0 transition-opacity duration-1000 group-hover:opacity-100 opacity-60">
+                </div>
             </div>
         </div>
     </section>
@@ -279,25 +282,45 @@
                             <div>S</div>
                             <div>S</div>
                         </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-sm">
+                        <div class="grid grid-cols-7 gap-2 text-center text-sm" id="calendarDays">
                             <div class="p-2 text-neutral-300">29</div>
                             <div class="p-2 text-neutral-300">30</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">1</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">2</div>
-                            <div class="p-2 bg-primary text-text-main font-bold rounded-full shadow-md">3</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">4</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">5</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">6</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">7</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">8</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">9</div>
-                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">10</div>
+                            <div onclick="selectDate(this, 1)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">1
+                            </div>
+                            <div onclick="selectDate(this, 2)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">2
+                            </div>
+                            <div onclick="selectDate(this, 3)"
+                                class="day-btn p-2 bg-primary text-text-main font-bold rounded-full shadow-md">3</div>
+                            <div onclick="selectDate(this, 4)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">4
+                            </div>
+                            <div onclick="selectDate(this, 5)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">5
+                            </div>
+                            <div onclick="selectDate(this, 6)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">6
+                            </div>
+                            <div onclick="selectDate(this, 7)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">7
+                            </div>
+                            <div onclick="selectDate(this, 8)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">8
+                            </div>
+                            <div onclick="selectDate(this, 9)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">9
+                            </div>
+                            <div onclick="selectDate(this, 10)"
+                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">10
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="flex flex-col justify-center space-y-6">
                     <div>
-                        <label class="block text-sm font-medium text-text-muted mb-2">Horários Disponíveis
+                        <label id="dateLabel" class="block text-sm font-medium text-text-muted mb-2">Horários
+                            Disponíveis
                             (03/10)</label>
                         <div class="grid grid-cols-2 gap-3" id="timeSlots">
                             <button type="button" onclick="selectTime(this, '08:00 - 09:00')"
@@ -434,6 +457,35 @@
     <script>
         AOS.init({ duration: 1000, once: true });
 
+        let selectedDate = '3';
+        function selectDate(btn, date) {
+            selectedDate = date;
+
+            // Update calendar visual
+            document.querySelectorAll('.day-btn').forEach(b => {
+                b.classList.remove('bg-primary', 'text-text-main', 'font-bold', 'shadow-md');
+                b.classList.add('hover:bg-primary/20');
+            });
+            btn.classList.add('bg-primary', 'text-text-main', 'font-bold', 'shadow-md');
+            btn.classList.remove('hover:bg-primary/20');
+
+            // Update label
+            document.getElementById('dateLabel').innerText = `Horários Disponíveis (${date.toString().padStart(2, '0')}/10)`;
+
+            // Re-render time slots slightly differently to show dynamic behavior
+            const timeSlots = document.getElementById('timeSlots');
+            timeSlots.style.opacity = '0';
+            setTimeout(() => {
+                // Remove selected time if date changes
+                selectedTime = '';
+                document.querySelectorAll('.time-btn').forEach(b => {
+                    b.classList.remove('border-primary', 'bg-primary/10', 'text-primary', 'font-medium');
+                    b.classList.add('border-neutral-300', 'dark:border-neutral-600');
+                });
+                timeSlots.style.opacity = '1';
+            }, 300);
+        }
+
         let selectedTime = '';
         function selectTime(btn, time) {
             selectedTime = time;
@@ -448,11 +500,11 @@
         function sendBooking() {
             const name = document.getElementById('bookingName').value;
             const phone = document.getElementById('bookingPhone').value;
-            if (!name || !phone || !selectedTime) {
-                alert('Por favor, preencha seu nome, telefone e escolha um dos horários disponíveis.');
+            if (!name || !phone || !selectedTime || !selectedDate) {
+                alert('Por favor, preencha seu nome, telefone e escolha uma data e horário.');
                 return;
             }
-            const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do horário de *${selectedTime}* (03/10). Meu contato é ${phone}.`;
+            const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedDate.toString().padStart(2, '0')}/10*, no horário de *${selectedTime}*. Meu contato é ${phone}.`;
             window.open(`https://wa.me/5583999999999?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
