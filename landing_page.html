@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 
-<html lang="pt-BR"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Studio RL - Pilates Clássico</title>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Studio RL - Pilates Clássico</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -25,296 +33,402 @@
                     },
                     fontFamily: {
                         "display": ["Newsreader", "serif"],
-                        "sans": ["Newsreader", "serif"] 
+                        "sans": ["Newsreader", "serif"]
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>
+    <style>
         body {
             font-family: 'Newsreader', serif;
         }
+
         .glass-button {
             background: rgba(236, 203, 19, 0.1);
             backdrop-filter: blur(8px);
             border: 1px solid rgba(236, 203, 19, 0.3);
             transition: all 0.3s ease;
         }
+
         .glass-button:hover {
             background: rgba(236, 203, 19, 0.2);
             border-color: rgba(236, 203, 19, 0.6);
         }
     </style>
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-neutral-light overflow-x-hidden transition-colors duration-300">
-<!-- Top Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-neutral-light dark:border-neutral-dark">
-<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-3xl">spa</span>
-<h2 class="text-xl font-bold tracking-tight uppercase">Studio RL</h2>
-</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#home">Início</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Sobre</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#services">Serviços</a>
-<a class="text-sm font-medium hover:text-primary transition-colors" href="#booking">Agendar</a>
-</div>
-<button class="bg-primary hover:bg-primary-dark text-text-main font-bold py-2 px-6 rounded-full text-sm transition-colors shadow-lg shadow-primary/20">
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-main dark:text-neutral-light overflow-x-hidden transition-colors duration-300">
+    <!-- Top Navigation -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-neutral-light dark:border-neutral-dark">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl">spa</span>
+                <h2 class="text-xl font-bold tracking-tight uppercase">Studio RL</h2>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#home">Início</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#about">Sobre</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#services">Serviços</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#booking">Agendar</a>
+            </div>
+            <a href="contato.html"
+                class="bg-primary hover:bg-primary-dark text-text-main font-bold py-2 px-6 rounded-full text-sm transition-colors shadow-lg shadow-primary/20">
                 Agendar Agora
-            </button>
-</div>
-</nav>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center pt-20" id="home">
-<div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" data-alt="High-end pilates equipment in a sunlit studio studio" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0iqsQTqL-1CQTXn9xM7U-wjYl7v1wZ9fIjsq4GuNVuIyvRUD7-Ld7N_gl217eqkzhmmRIdOXIJFYhcqhWbBOTwVGyogg0wx3SUs9EmMqj3VFEErBwUQUVFm8ty25zDpW0IbuDn6nZcUoUg4A-ZE0uIlbJKCG7daMT9hspD7kCPyUkNTNveb49Rwntshd0TJoVHqdTkwjvwXx2GfmAwssglrMFFDFPG0o6qtm2snQfHakKM7iHiC9xFifuCoGHbOlRi4Hf75uDSD8');"></div>
-<div class="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
-</div>
-<div class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 animate-fade-in-up">
-<span class="text-white/90 text-sm uppercase tracking-[0.2em] font-medium mb-2">Studio de Pilates Rhaisa Linhares</span>
-<h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-medium text-white leading-tight italic">
-                A Essência do <br/>
-<span class="not-italic text-primary">Pilates Clássico</span>
-</h1>
-<p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mt-4">
+            </a>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center pt-20" id="home">
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full bg-cover bg-center"
+                data-alt="High-end pilates equipment in a sunlit studio studio"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD0iqsQTqL-1CQTXn9xM7U-wjYl7v1wZ9fIjsq4GuNVuIyvRUD7-Ld7N_gl217eqkzhmmRIdOXIJFYhcqhWbBOTwVGyogg0wx3SUs9EmMqj3VFEErBwUQUVFm8ty25zDpW0IbuDn6nZcUoUg4A-ZE0uIlbJKCG7daMT9hspD7kCPyUkNTNveb49Rwntshd0TJoVHqdTkwjvwXx2GfmAwssglrMFFDFPG0o6qtm2snQfHakKM7iHiC9xFifuCoGHbOlRi4Hf75uDSD8');">
+            </div>
+            <div class="absolute inset-0 bg-black/30 dark:bg-black/50"></div>
+        </div>
+        <div
+            class="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-6 animate-fade-in-up">
+            <span class="text-white/90 text-sm uppercase tracking-[0.2em] font-medium mb-2">Studio de Pilates Rhaisa
+                Linhares</span>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-display font-medium text-white leading-tight italic">
+                A Essência do <br />
+                <span class="not-italic text-primary">Pilates Clássico</span>
+            </h1>
+            <p class="text-white/80 text-lg md:text-xl font-light max-w-2xl mt-4">
                 Redescubra seu corpo através da contrologia pura em um ambiente de luxo exclusivo em Campina Grande.
             </p>
-<div class="flex flex-col sm:flex-row gap-4 mt-8">
-<button class="glass-button text-white px-8 py-3 rounded-full text-lg font-medium backdrop-blur-md">
+            <div class="flex flex-col sm:flex-row gap-4 mt-8">
+                <button class="glass-button text-white px-8 py-3 rounded-full text-lg font-medium backdrop-blur-md"
+                    onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
                     Conheça o Studio
                 </button>
-<button class="bg-primary hover:bg-white text-text-main px-8 py-3 rounded-full text-lg font-bold transition-all shadow-xl shadow-black/20">
+                <a href="contato.html"
+                    class="bg-primary hover:bg-white text-text-main px-8 py-3 rounded-full text-lg font-bold transition-all shadow-xl shadow-black/20 text-center">
                     Agendar Sessão
-                </button>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark" id="about">
-<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-8">
-<div class="flex items-center gap-4">
-<div class="h-px w-12 bg-primary"></div>
-<span class="text-text-muted uppercase tracking-widest text-sm font-semibold">Sobre Nós</span>
-</div>
-<h2 class="text-4xl md:text-5xl font-display font-medium leading-tight">
-                    Excelência e Tradição no <br/>
-<span class="italic text-text-muted">Edifício Canoupus</span>
-</h2>
-<p class="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
-                    Localizado no prestigiado Edifício Canoupus, oferecemos uma experiência exclusiva com a Dra. Rhaisa Linhares. Cada detalhe do nosso espaço foi pensado para proporcionar privacidade, conforto e a mais pura prática do método Pilates.
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-24 px-6 md:px-12 bg-background-light dark:bg-background-dark" id="about">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="flex items-center gap-4">
+                    <div class="h-px w-12 bg-primary"></div>
+                    <span class="text-text-muted uppercase tracking-widest text-sm font-semibold">Sobre Nós</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-display font-medium leading-tight">
+                    Excelência e Tradição no <br />
+                    <span class="italic text-text-muted">Edifício Canoupus</span>
+                </h2>
+                <p class="text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+                    Localizado no prestigiado Edifício Canoupus, oferecemos uma experiência exclusiva com a Dra. Rhaisa
+                    Linhares. Cada detalhe do nosso espaço foi pensado para proporcionar privacidade, conforto e a mais
+                    pura prática do método Pilates.
                 </p>
-<div class="grid grid-cols-2 gap-6 pt-4">
-<div class="border-l-2 border-primary pl-4">
-<span class="block text-3xl font-bold text-text-main dark:text-white">10+</span>
-<span class="text-sm text-text-muted">Anos de Experiência</span>
-</div>
-<div class="border-l-2 border-primary pl-4">
-<span class="block text-3xl font-bold text-text-main dark:text-white">100%</span>
-<span class="text-sm text-text-muted">Equipamentos Clássicos</span>
-</div>
-</div>
-<div class="flex items-center gap-4 pt-4">
-<div class="w-12 h-12 rounded-full overflow-hidden bg-neutral-200">
-<img alt="Dra. Rhaisa Linhares portrait" class="w-full h-full object-cover" data-alt="Portrait of a professional woman smiling gently" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkP_22lNAraXyKo1_Hy4mS1V-qPiVIe1p7zbRgFssr4ZF2AWVs5PBOp0WoWHIQtwNj1SW9-xT9SC8gGs63sQoYSRyBd5lH7WyGHm-E_vkcEP9GKEPdWSrXVVbyVpKakmRmwDMf8hGykXw33Cu9PldU8Pmq4SuDtHwLRbb_Mn1I5INTV3A2_A9f40ytWECrl8LxdxyBtdcElKmCkbX7o2CSNPo-74SIRshpRjWx08iMyQNPeB55KDu9JLOtz8Dd5mvx2iTARU5Aeoc"/>
-</div>
-<div>
-<p class="font-bold text-text-main dark:text-white">Dra. Rhaisa Linhares</p>
-<p class="text-sm text-text-muted">Fisioterapeuta &amp; Instrutora Chefe</p>
-</div>
-</div>
-</div>
-<div class="relative h-[600px] w-full hidden lg:block">
-<!-- Masonry Grid simulated -->
-<div class="absolute top-0 right-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl z-10">
-<div class="w-full h-full bg-cover bg-center" data-alt="Detail of wooden pilates reformer equipment leather straps" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl2Q5O7Msd8TR1E6b6g79yKTgfE_3A1pyYFpqiecvPM8jYbkfvDqA3Pp0FD3xC3dtl4cKN52eHHQt3M-3nnWjsrR3Z6CzIgbIyAa7UO4n6j-NJgcby14SPRIkNKEa0y4DF7wiw24SmqA9ZAa4qgjKWLV4kIT8eX6yMd0f3Xb5xTZFpx4CRu8qOeM40BVowRHZaewleFxfusxg7xnLv6V1Q7VfQZN9l732kQ79QgAf69RW0a7EnNbXW5TAp2ZMUziK4_BXGHj2mmY8');"></div>
-</div>
-<div class="absolute bottom-0 left-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl border-8 border-background-light dark:border-background-dark z-20">
-<div class="w-full h-full bg-cover bg-center" data-alt="Modern clean pilates studio interior with mirrors" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb1oqRoP9gnbPj6crtaKW1pUyOwLMw_HrAYvgjNGBVSg7fmOrWTp7Vd2ytbmxSj0YL6ZuHyrPOz_fg8OR3iqP0kTaDks10stzHM2bf7XZFJRdZgeiAG0RUpGJRA1PaRiDfKg5GOeOfuT-V2OwIYszUpn4QoIaWilpGMUseQBOF7CU9P54u16pp0XgFNChg-n9L9u6VNBL02fSdLNO5v3A7u1tG73zuWZFqEXkFTviDqIoqycfnx4p3Q-yiDtKu-FwaEhr7zpuHme4');"></div>
-</div>
-<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl z-0"></div>
-</div>
-</div>
-</section>
-<!-- Services Section -->
-<section class="bg-neutral-light dark:bg-neutral-dark/30 py-24" id="services">
-<div class="max-w-7xl mx-auto px-6 mb-16 text-center">
-<span class="text-primary font-medium tracking-widest text-sm uppercase block mb-4">Nossos Serviços</span>
-<h2 class="text-4xl md:text-5xl font-display font-medium">Cuidado Integral</h2>
-</div>
-<div class="flex flex-col gap-0">
-<!-- Service 1 -->
-<div class="group relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
-<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
-<div class="w-full h-full bg-cover bg-center bg-fixed" data-alt="Woman doing advanced pilates move on cadillac machine" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGnlOF19SASomIY6dGc7zIA6n4a7PPT7umlefM19JZ46Jk8ZtDfUrjLBCtrjXA5TriR2iP1gZM4lMl9eTcFH4dKAbLdzX7Sg3WtGCXfky7z_CG-IJQp8Y4CogYxyjSevilgwefx6P29OugW00yZhfp4mygMxNNolY21lbWxNU5wJhPx--bBg-0D0VFDn7DqoS5Pi_VJtB0ZSNaKhcVXTX_DyGnJ1kZqNgy6yN-pOlo4Wgp22e5s_z1lRvD29tVqDND3wG7sRKbVd0');"></div>
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-</div>
-<div class="relative z-10 text-center max-w-2xl px-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-<span class="material-symbols-outlined text-5xl text-primary mb-4">self_improvement</span>
-<h3 class="text-4xl md:text-5xl font-display mb-4">Pilates Clássico</h3>
-<p class="text-lg font-light text-white/90 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                         O método original criado por Joseph Pilates. Foco em controle, precisão e fluidez para um corpo forte e flexível.
-                     </p>
-<button class="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-primary hover:text-text-main hover:border-primary transition-all text-sm font-bold uppercase tracking-wide">Saiba Mais</button>
-</div>
-</div>
-<!-- Service 2 -->
-<div class="group relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
-<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
-<div class="w-full h-full bg-cover bg-center bg-fixed" data-alt="Pregnant woman gently exercising with a yoga ball" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvBtQ6s1lqzUooK5uHJgeAmarx55lwloTCCoG0CMyU9KAwYYfyNiH53OMBpRSd36eiswGVovPMD4Hebl-9pRDtQZOB0dwjcBNRJSPf7y9Xzsnx3DFJo9CMOdI2r4YgPr412Na079hNjCeZeQSRkvsVMwQ7p963Mv5Rckdvq3PFPYTCZFtlqtW6ejZdKUP2uHZyaFEA-Tr6TxtNW82QgUTxDFcoJsNOGjMuzWoYeasNVtXiLwD249OSoftfm_CatjYuLIYvRZupr8o');"></div>
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-</div>
-<div class="relative z-10 text-center max-w-2xl px-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-<span class="material-symbols-outlined text-5xl text-primary mb-4">pregnant_woman</span>
-<h3 class="text-4xl md:text-5xl font-display mb-4">Gestantes</h3>
-<p class="text-lg font-light text-white/90 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        Acompanhamento especializado para uma gestação saudável, preparando o corpo para o parto e pós-parto.
+                <div class="grid grid-cols-2 gap-6 pt-4">
+                    <div class="border-l-2 border-primary pl-4">
+                        <span class="block text-3xl font-bold text-text-main dark:text-white">10+</span>
+                        <span class="text-sm text-text-muted">Anos de Experiência</span>
+                    </div>
+                    <div class="border-l-2 border-primary pl-4">
+                        <span class="block text-3xl font-bold text-text-main dark:text-white">100%</span>
+                        <span class="text-sm text-text-muted">Equipamentos Clássicos</span>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4 pt-4">
+                    <div class="w-12 h-12 rounded-full overflow-hidden bg-neutral-200">
+                        <img alt="Dra. Rhaisa Linhares portrait" class="w-full h-full object-cover"
+                            data-alt="Portrait of a professional woman smiling gently"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkP_22lNAraXyKo1_Hy4mS1V-qPiVIe1p7zbRgFssr4ZF2AWVs5PBOp0WoWHIQtwNj1SW9-xT9SC8gGs63sQoYSRyBd5lH7WyGHm-E_vkcEP9GKEPdWSrXVVbyVpKakmRmwDMf8hGykXw33Cu9PldU8Pmq4SuDtHwLRbb_Mn1I5INTV3A2_A9f40ytWECrl8LxdxyBtdcElKmCkbX7o2CSNPo-74SIRshpRjWx08iMyQNPeB55KDu9JLOtz8Dd5mvx2iTARU5Aeoc" />
+                    </div>
+                    <div>
+                        <p class="font-bold text-text-main dark:text-white">Dra. Rhaisa Linhares</p>
+                        <p class="text-sm text-text-muted">Fisioterapeuta &amp; Instrutora Chefe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[600px] w-full hidden lg:block">
+                <!-- Masonry Grid simulated -->
+                <div class="absolute top-0 right-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl z-10">
+                    <div class="w-full h-full bg-cover bg-center"
+                        data-alt="Detail of wooden pilates reformer equipment leather straps"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAl2Q5O7Msd8TR1E6b6g79yKTgfE_3A1pyYFpqiecvPM8jYbkfvDqA3Pp0FD3xC3dtl4cKN52eHHQt3M-3nnWjsrR3Z6CzIgbIyAa7UO4n6j-NJgcby14SPRIkNKEa0y4DF7wiw24SmqA9ZAa4qgjKWLV4kIT8eX6yMd0f3Xb5xTZFpx4CRu8qOeM40BVowRHZaewleFxfusxg7xnLv6V1Q7VfQZN9l732kQ79QgAf69RW0a7EnNbXW5TAp2ZMUziK4_BXGHj2mmY8');">
+                    </div>
+                </div>
+                <div
+                    class="absolute bottom-0 left-0 w-2/3 h-2/3 rounded-lg overflow-hidden shadow-2xl border-8 border-background-light dark:border-background-dark z-20">
+                    <div class="w-full h-full bg-cover bg-center"
+                        data-alt="Modern clean pilates studio interior with mirrors"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCb1oqRoP9gnbPj6crtaKW1pUyOwLMw_HrAYvgjNGBVSg7fmOrWTp7Vd2ytbmxSj0YL6ZuHyrPOz_fg8OR3iqP0kTaDks10stzHM2bf7XZFJRdZgeiAG0RUpGJRA1PaRiDfKg5GOeOfuT-V2OwIYszUpn4QoIaWilpGMUseQBOF7CU9P54u16pp0XgFNChg-n9L9u6VNBL02fSdLNO5v3A7u1tG73zuWZFqEXkFTviDqIoqycfnx4p3Q-yiDtKu-FwaEhr7zpuHme4');">
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-2xl z-0"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section class="bg-neutral-light dark:bg-neutral-dark/30 py-24" id="services">
+        <div class="max-w-7xl mx-auto px-6 mb-16 text-center">
+            <span class="text-primary font-medium tracking-widest text-sm uppercase block mb-4">Nossos Serviços</span>
+            <h2 class="text-4xl md:text-5xl font-display font-medium">Cuidado Integral</h2>
+        </div>
+        <div class="flex flex-col gap-0">
+            <!-- Service 1 -->
+            <div class="group relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
+                <div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+                    <div class="w-full h-full bg-cover bg-center bg-fixed"
+                        data-alt="Woman doing advanced pilates move on cadillac machine"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGnlOF19SASomIY6dGc7zIA6n4a7PPT7umlefM19JZ46Jk8ZtDfUrjLBCtrjXA5TriR2iP1gZM4lMl9eTcFH4dKAbLdzX7Sg3WtGCXfky7z_CG-IJQp8Y4CogYxyjSevilgwefx6P29OugW00yZhfp4mygMxNNolY21lbWxNU5wJhPx--bBg-0D0VFDn7DqoS5Pi_VJtB0ZSNaKhcVXTX_DyGnJ1kZqNgy6yN-pOlo4Wgp22e5s_z1lRvD29tVqDND3wG7sRKbVd0');">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+                </div>
+                <div
+                    class="relative z-10 text-center max-w-2xl px-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">self_improvement</span>
+                    <h3 class="text-4xl md:text-5xl font-display mb-4">Pilates Clássico</h3>
+                    <p
+                        class="text-lg font-light text-white/90 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        O método original criado por Joseph Pilates. Foco em controle, precisão e fluidez para um corpo
+                        forte e flexível.
                     </p>
-<button class="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-primary hover:text-text-main hover:border-primary transition-all text-sm font-bold uppercase tracking-wide">Saiba Mais</button>
-</div>
-</div>
-<!-- Service 3 -->
-<div class="group relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
-<div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
-<div class="w-full h-full bg-cover bg-center bg-fixed" data-alt="Physiotherapist helping patient with shoulder exercise" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5jMOWqqInltsppZx3YFreTMujj-6QtW5hkAg2m7WsgXoMAGmnLHC4lDXYp61x2zTtIq3ALSWKN7EHnPqbe3E0QGxQvOBLhn2iwbS5G2xhOQcYLYE01-RrH28gfi4_7QopeSAcYltXWj1q6XV5JbEzNj46QFryCfsJ3TG_BrpGHU8l90nIWcWl2c5a26oE9YyjyFz6Kd2rTHjUWK2wA3pOPmtxf2SBR66F-UfpefVQjH6wknBg-37JzmPBdcFj1US8W3LimnuAzl0');"></div>
-<div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
-</div>
-<div class="relative z-10 text-center max-w-2xl px-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-<span class="material-symbols-outlined text-5xl text-primary mb-4">healing</span>
-<h3 class="text-4xl md:text-5xl font-display mb-4">Reabilitação</h3>
-<p class="text-lg font-light text-white/90 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                        Tratamento de lesões e dores crônicas com a expertise fisioterapêutica aliada aos aparelhos de Pilates.
+                    <a href="contato.html"
+                        class="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-primary hover:text-text-main hover:border-primary transition-all text-sm font-bold uppercase tracking-wide inline-block">Saiba
+                        Mais</a>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="group relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
+                <div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+                    <div class="w-full h-full bg-cover bg-center bg-fixed"
+                        data-alt="Pregnant woman gently exercising with a yoga ball"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBvBtQ6s1lqzUooK5uHJgeAmarx55lwloTCCoG0CMyU9KAwYYfyNiH53OMBpRSd36eiswGVovPMD4Hebl-9pRDtQZOB0dwjcBNRJSPf7y9Xzsnx3DFJo9CMOdI2r4YgPr412Na079hNjCeZeQSRkvsVMwQ7p963Mv5Rckdvq3PFPYTCZFtlqtW6ejZdKUP2uHZyaFEA-Tr6TxtNW82QgUTxDFcoJsNOGjMuzWoYeasNVtXiLwD249OSoftfm_CatjYuLIYvRZupr8o');">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+                </div>
+                <div
+                    class="relative z-10 text-center max-w-2xl px-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">pregnant_woman</span>
+                    <h3 class="text-4xl md:text-5xl font-display mb-4">Gestantes</h3>
+                    <p
+                        class="text-lg font-light text-white/90 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        Acompanhamento especializado para uma gestação saudável, preparando o corpo para o parto e
+                        pós-parto.
                     </p>
-<button class="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-primary hover:text-text-main hover:border-primary transition-all text-sm font-bold uppercase tracking-wide">Saiba Mais</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Booking Section -->
-<section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="booking">
-<div class="max-w-5xl mx-auto bg-neutral-light/50 dark:bg-neutral-dark/20 rounded-2xl p-8 md:p-12 shadow-sm border border-neutral-200 dark:border-neutral-800">
-<div class="grid md:grid-cols-2 gap-12">
-<div>
-<h2 class="text-3xl font-display mb-6">Agende sua Sessão</h2>
-<p class="text-neutral-600 dark:text-neutral-400 mb-8">Selecione o melhor horário para sua avaliação ou aula experimental.</p>
-<!-- Simplified Calendar UI -->
-<div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
-<div class="flex justify-between items-center mb-6">
-<span class="font-bold text-lg">Outubro 2023</span>
-<div class="flex gap-2">
-<button class="p-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-full"><span class="material-symbols-outlined text-sm">chevron_left</span></button>
-<button class="p-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-full"><span class="material-symbols-outlined text-sm">chevron_right</span></button>
-</div>
-</div>
-<div class="grid grid-cols-7 gap-2 text-center text-sm mb-2 text-text-muted">
-<div>D</div><div>S</div><div>T</div><div>Q</div><div>Q</div><div>S</div><div>S</div>
-</div>
-<div class="grid grid-cols-7 gap-2 text-center text-sm">
-<div class="p-2 text-neutral-300">29</div>
-<div class="p-2 text-neutral-300">30</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">1</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">2</div>
-<div class="p-2 bg-primary text-text-main font-bold rounded-full shadow-md">3</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">4</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">5</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">6</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">7</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">8</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">9</div>
-<div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">10</div>
-</div>
-</div>
-</div>
-<div class="flex flex-col justify-center space-y-6">
-<div>
-<label class="block text-sm font-medium text-text-muted mb-2">Horários Disponíveis (03/10)</label>
-<div class="grid grid-cols-2 gap-3">
-<button class="py-2 px-4 border border-neutral-300 dark:border-neutral-600 rounded-lg text-sm hover:border-primary hover:text-primary transition-colors">08:00 - 09:00</button>
-<button class="py-2 px-4 border border-primary bg-primary/10 text-primary rounded-lg text-sm font-medium">14:00 - 15:00</button>
-<button class="py-2 px-4 border border-neutral-300 dark:border-neutral-600 rounded-lg text-sm hover:border-primary hover:text-primary transition-colors">16:30 - 17:30</button>
-<button class="py-2 px-4 border border-neutral-300 dark:border-neutral-600 rounded-lg text-sm hover:border-primary hover:text-primary transition-colors">18:00 - 19:00</button>
-</div>
-</div>
-<form class="space-y-4">
-<div>
-<input class="w-full bg-transparent border-b border-neutral-300 dark:border-neutral-600 py-3 focus:outline-none focus:border-primary text-text-main dark:text-neutral-light placeholder-neutral-400" placeholder="Seu Nome" type="text"/>
-</div>
-<div>
-<input class="w-full bg-transparent border-b border-neutral-300 dark:border-neutral-600 py-3 focus:outline-none focus:border-primary text-text-main dark:text-neutral-light placeholder-neutral-400" placeholder="WhatsApp / Telefone" type="tel"/>
-</div>
-<button class="w-full bg-primary hover:bg-primary-dark text-text-main font-bold py-3 rounded-lg shadow-lg shadow-primary/20 transition-all mt-4" type="button">
-                            Confirmar Agendamento
-                        </button>
-</form>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-neutral-dark text-neutral-light pt-20 pb-10">
-<div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
-<!-- Brand -->
-<div>
-<div class="flex items-center gap-2 mb-6">
-<span class="material-symbols-outlined text-primary text-2xl">spa</span>
-<h3 class="text-2xl font-bold uppercase">Studio RL</h3>
-</div>
-<p class="text-neutral-400 text-sm mb-6 leading-relaxed">
+                    <a href="contato.html"
+                        class="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-primary hover:text-text-main hover:border-primary transition-all text-sm font-bold uppercase tracking-wide inline-block">Saiba
+                        Mais</a>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="group relative h-[80vh] w-full overflow-hidden flex items-center justify-center">
+                <div class="absolute inset-0 transition-transform duration-700 group-hover:scale-105">
+                    <div class="w-full h-full bg-cover bg-center bg-fixed"
+                        data-alt="Physiotherapist helping patient with shoulder exercise"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC5jMOWqqInltsppZx3YFreTMujj-6QtW5hkAg2m7WsgXoMAGmnLHC4lDXYp61x2zTtIq3ALSWKN7EHnPqbe3E0QGxQvOBLhn2iwbS5G2xhOQcYLYE01-RrH28gfi4_7QopeSAcYltXWj1q6XV5JbEzNj46QFryCfsJ3TG_BrpGHU8l90nIWcWl2c5a26oE9YyjyFz6Kd2rTHjUWK2wA3pOPmtxf2SBR66F-UfpefVQjH6wknBg-37JzmPBdcFj1US8W3LimnuAzl0');">
+                    </div>
+                    <div class="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors"></div>
+                </div>
+                <div
+                    class="relative z-10 text-center max-w-2xl px-6 text-white translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <span class="material-symbols-outlined text-5xl text-primary mb-4">healing</span>
+                    <h3 class="text-4xl md:text-5xl font-display mb-4">Reabilitação</h3>
+                    <p
+                        class="text-lg font-light text-white/90 mb-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                        Tratamento de lesões e dores crônicas com a expertise fisioterapêutica aliada aos aparelhos de
+                        Pilates.
+                    </p>
+                    <a href="contato.html"
+                        class="border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full hover:bg-primary hover:text-text-main hover:border-primary transition-all text-sm font-bold uppercase tracking-wide inline-block">Saiba
+                        Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Booking Section -->
+    <section class="py-24 px-6 bg-background-light dark:bg-background-dark" id="booking">
+        <div
+            class="max-w-5xl mx-auto bg-neutral-light/50 dark:bg-neutral-dark/20 rounded-2xl p-8 md:p-12 shadow-sm border border-neutral-200 dark:border-neutral-800">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-display mb-6">Agende sua Sessão</h2>
+                    <p class="text-neutral-600 dark:text-neutral-400 mb-8">Selecione o melhor horário para sua avaliação
+                        ou aula experimental.</p>
+                    <!-- Simplified Calendar UI -->
+                    <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
+                        <div class="flex justify-between items-center mb-6">
+                            <span class="font-bold text-lg">Outubro 2023</span>
+                            <div class="flex gap-2">
+                                <button class="p-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-full"><span
+                                        class="material-symbols-outlined text-sm">chevron_left</span></button>
+                                <button class="p-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-full"><span
+                                        class="material-symbols-outlined text-sm">chevron_right</span></button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-2 text-center text-sm mb-2 text-text-muted">
+                            <div>D</div>
+                            <div>S</div>
+                            <div>T</div>
+                            <div>Q</div>
+                            <div>Q</div>
+                            <div>S</div>
+                            <div>S</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-2 text-center text-sm">
+                            <div class="p-2 text-neutral-300">29</div>
+                            <div class="p-2 text-neutral-300">30</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">1</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">2</div>
+                            <div class="p-2 bg-primary text-text-main font-bold rounded-full shadow-md">3</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">4</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">5</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">6</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">7</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">8</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">9</div>
+                            <div class="p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">10</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center space-y-6">
+                    <div>
+                        <label class="block text-sm font-medium text-text-muted mb-2">Horários Disponíveis
+                            (03/10)</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <button
+                                class="py-2 px-4 border border-neutral-300 dark:border-neutral-600 rounded-lg text-sm hover:border-primary hover:text-primary transition-colors">08:00
+                                - 09:00</button>
+                            <button
+                                class="py-2 px-4 border border-primary bg-primary/10 text-primary rounded-lg text-sm font-medium">14:00
+                                - 15:00</button>
+                            <button
+                                class="py-2 px-4 border border-neutral-300 dark:border-neutral-600 rounded-lg text-sm hover:border-primary hover:text-primary transition-colors">16:30
+                                - 17:30</button>
+                            <button
+                                class="py-2 px-4 border border-neutral-300 dark:border-neutral-600 rounded-lg text-sm hover:border-primary hover:text-primary transition-colors">18:00
+                                - 19:00</button>
+                        </div>
+                    </div>
+                    <form class="space-y-4">
+                        <div>
+                            <input
+                                class="w-full bg-transparent border-b border-neutral-300 dark:border-neutral-600 py-3 focus:outline-none focus:border-primary text-text-main dark:text-neutral-light placeholder-neutral-400"
+                                placeholder="Seu Nome" type="text" />
+                        </div>
+                        <div>
+                            <input
+                                class="w-full bg-transparent border-b border-neutral-300 dark:border-neutral-600 py-3 focus:outline-none focus:border-primary text-text-main dark:text-neutral-light placeholder-neutral-400"
+                                placeholder="WhatsApp / Telefone" type="tel" />
+                        </div>
+                        <a href="contato.html"
+                            class="w-full bg-primary hover:bg-primary-dark text-text-main font-bold py-3 rounded-lg shadow-lg shadow-primary/20 transition-all mt-4 block text-center">
+                            Avançar para Agendamento
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-neutral-dark text-neutral-light pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-white/10 pb-12">
+            <!-- Brand -->
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="material-symbols-outlined text-primary text-2xl">spa</span>
+                    <h3 class="text-2xl font-bold uppercase">Studio RL</h3>
+                </div>
+                <p class="text-neutral-400 text-sm mb-6 leading-relaxed">
                     Elevando o padrão do Pilates em Campina Grande. Conecte corpo e mente em nosso espaço exclusivo.
                 </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-text-main transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">check_circle</span> <!-- Instagram placeholder icon -->
-</a>
-<a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-text-main transition-colors" href="#">
-<span class="material-symbols-outlined text-sm">mail</span>
-</a>
-</div>
-</div>
-<!-- Location -->
-<div>
-<h4 class="text-lg font-bold mb-6 text-white">Localização</h4>
-<div class="flex gap-3 mb-4">
-<span class="material-symbols-outlined text-primary mt-1">location_on</span>
-<p class="text-neutral-400 text-sm">
-                        Edifício Canoupus, Sala 402<br/>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-text-main transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">check_circle</span>
+                        <!-- Instagram placeholder icon -->
+                    </a>
+                    <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-text-main transition-colors"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">mail</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Location -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-white">Localização</h4>
+                <div class="flex gap-3 mb-4">
+                    <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                    <p class="text-neutral-400 text-sm">
+                        Edifício Canoupus, Sala 402<br />
                         Centro, Campina Grande - PB
                     </p>
-</div>
-<!-- Map Placeholder -->
-<div class="w-full h-32 bg-neutral-800 rounded-lg overflow-hidden relative">
-<div class="w-full h-full bg-cover bg-center opacity-70 hover:opacity-100 transition-opacity" data-location="Campina Grande" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZxFf3EEFAjxK1YvG8kbJJT8NAnyGVgS960OOFUnEgSMlLGjApro-cQ7WkIaRPpzNpeP5k8F6Uzp8OPpa0iwz35ahFbWoFBOi6SgSp4WjsCeJgGxYDkuBKfxytjqy50glk-wIANTWrkCc6W8MTfyQFrfw2VJAZi9ySGfsPJ8X3MaPaxU6M-r3nlMrT8MKefGwWe6GZ8Qndo52rKkMaD_hz8sqDkL6ZDSiDvcQfjcEjvdqM9dnG29w1cOJaVbea2zy-Y5_0V-WvMk');"></div>
-<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-<span class="bg-neutral-900/80 px-3 py-1 text-xs rounded text-white">Ver no Mapa</span>
-</div>
-</div>
-</div>
-<!-- Instagram Feed Placeholder -->
-<div>
-<h4 class="text-lg font-bold mb-6 text-white">Siga-nos @studio_rl</h4>
-<div class="grid grid-cols-3 gap-2">
-<div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity" data-alt="Instagram post thumbnail pilates pose" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRHSzZGbBgNWO0wmuXGoTdkMTOZGqga5QVjOkukTG83-28UPcphOQhZ51F4V7WNRFTz3TFytSjOdRFSAwSr1MqhIYk5ZeMRM2ZhOEnJGOfRTRUPIMi_Udd5DnX1zInU5iUDwmPEp7lSBf_L_z6CFLUbV-zYDJwc2qHdpsnFaCMdplvCI8bSwHSXhN7Ffkga8j3ge2-NiYfVZi7RtXBJ7r3a60PwLfJklHHXa-b5QvRh9OtPt0pOM7JpfFiFsbtI0-E2qOsIuGWNB8');"></div>
-<div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity" data-alt="Instagram post thumbnail studio detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvEARio42YIdJdH-wDsYCyJijKUUU0dTT8JMlNA3TkPGfTohdii6efdAVsDmmz3CyHw5Q8oiAqnnZ6PAP1LzvGww1J64K2jwfiP6cT2dsWWxu8mXcTOL1GG9xjkFxrC0zXRwOwvBfKpxaFJ4YCVBFoAEOJnRGyPUpQl-VEVb6nPb5V715h41NHnPeoxcXT2OaLfZW74ynyRRravWIEQXEsY0CnbO023a4GgWNBjBolPE0CYKuO1cvPj2e2cyhcgjIIwAMTJLDDYjk');"></div>
-<div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity" data-alt="Instagram post thumbnail happy client" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1jECFlX2FOmKft5kh4Cu-8OvnTipekOVfyYeUG4yv-ywffn9mS3k5hDUtWTekynguqHUNKVNfTUdKIw5UhJ_gXyChLHTSuLkuvsSGlm8yT2F_HwX8OYLdrrTEjCX58VWooMQqZcAY25XGnx3YNC4WgNSARdKruaN_dus0J2z5B3LGp6VJaSc-LnmVvXR6PCnS_Zzw75FcSl84vLvH82MExc4OuHkFJ1XXUm2jHeU-RvMb8T23SC4Vqh3_zW9mWrt2mBm9fAeMYYw');"></div>
-<div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity" data-alt="Instagram post thumbnail physiotherapy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0In0u9d2HkZMr8EjmZJRVSYtY0Tm9bDqVR71anS8a_9Q-YSSuZfaEf1Ofh5jW8JgpRqEX7iVJymt3opP1kCCM-hXIC0-zBGB2OwyWGh1nXNY6R51bdxwJWC08kRyWQCoN5iKviHk0zp82ZYgp3xdScfkeZraJ-Mv8hiJ1etqyfRg1h5bXE62OoGr77Mdjmb-3DSD6AdHHUctXhMFTYtKK27EuNXwA-tWjYEioScuUz9XUqc5XnqTGMKGpT6UF-nGtyya0Y9kfqF4');"></div>
-<div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity" data-alt="Instagram post thumbnail equipment detail" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-GgG5-fU2ArYxXNwe3vbB8-M_4VAJoCvO9GawixWRt1mJh90VrbKKpxH2IQVin3ZB7l1qVCnDZsmko7ppyodaLvBKigzMdaS2-8KHBnwjH0vZNxp-GgMLgJLUHJa49ByI1rKgJLOo4BfZE-2bIOtXG5xzzUxzjeRPAhBOUHlf0XJMqISG4JE5WR8mcv28bhet8409tnFgUDEMqLpgscDxFxIU2ly2rAtvXg5VS1ahsimqXLtFnhfeWAwKezFvNULvJ6k-PtLNyxw');"></div>
-<div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity" data-alt="Instagram post thumbnail advanced move" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLMflNWY8514RCNNPN-o2PewRBp_X5-RJ-ii3h_zASSE7yPcoGitsveYMswRMz0Qxk58sIRiAgkkejiGX5fO8NU64WkMYOk2dvEz0e0Q6Xt2AlK-D91NQalPK6LaOtZNnlkB88gcUyyXI9-WARAU61kpZ-mRD5ALWq7J11_NZQNdqDL0nS5O7ZqFmMANWAQyXldyrRfwjHjGoJozIbUOcxCYS2IjkQTqq3_Idi24N555b3tcPhVgqBGe-tR8C8UNBBeGlsOBjzbuE');"></div>
-</div>
-</div>
-</div>
-<div class="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500">
-<p>© 2023 Studio RL. Todos os direitos reservados.</p>
-<p class="mt-2 md:mt-0">Design by AI</p>
-</div>
-</footer>
-<!-- Floating WhatsApp Button -->
-<a aria-label="Contact on WhatsApp" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg shadow-black/20 transition-all hover:-translate-y-1 flex items-center justify-center group" href="#">
-<svg class="bi bi-whatsapp w-6 h-6" fill="currentColor" height="24" viewbox="0 0 16 16" width="24" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
-</svg>
-<span class="absolute right-full mr-3 bg-white text-black px-3 py-1 rounded-lg text-sm font-medium shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Fale Conosco</span>
-</a>
-</body></html>
+                </div>
+                <!-- Map Placeholder -->
+                <div class="w-full h-32 bg-neutral-800 rounded-lg overflow-hidden relative">
+                    <div class="w-full h-full bg-cover bg-center opacity-70 hover:opacity-100 transition-opacity"
+                        data-location="Campina Grande"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZxFf3EEFAjxK1YvG8kbJJT8NAnyGVgS960OOFUnEgSMlLGjApro-cQ7WkIaRPpzNpeP5k8F6Uzp8OPpa0iwz35ahFbWoFBOi6SgSp4WjsCeJgGxYDkuBKfxytjqy50glk-wIANTWrkCc6W8MTfyQFrfw2VJAZi9ySGfsPJ8X3MaPaxU6M-r3nlMrT8MKefGwWe6GZ8Qndo52rKkMaD_hz8sqDkL6ZDSiDvcQfjcEjvdqM9dnG29w1cOJaVbea2zy-Y5_0V-WvMk');">
+                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <span class="bg-neutral-900/80 px-3 py-1 text-xs rounded text-white">Ver no Mapa</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Instagram Feed Placeholder -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 text-white">Siga-nos @studio_rl</h4>
+                <div class="grid grid-cols-3 gap-2">
+                    <div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity"
+                        data-alt="Instagram post thumbnail pilates pose"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRHSzZGbBgNWO0wmuXGoTdkMTOZGqga5QVjOkukTG83-28UPcphOQhZ51F4V7WNRFTz3TFytSjOdRFSAwSr1MqhIYk5ZeMRM2ZhOEnJGOfRTRUPIMi_Udd5DnX1zInU5iUDwmPEp7lSBf_L_z6CFLUbV-zYDJwc2qHdpsnFaCMdplvCI8bSwHSXhN7Ffkga8j3ge2-NiYfVZi7RtXBJ7r3a60PwLfJklHHXa-b5QvRh9OtPt0pOM7JpfFiFsbtI0-E2qOsIuGWNB8');">
+                    </div>
+                    <div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity"
+                        data-alt="Instagram post thumbnail studio detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvEARio42YIdJdH-wDsYCyJijKUUU0dTT8JMlNA3TkPGfTohdii6efdAVsDmmz3CyHw5Q8oiAqnnZ6PAP1LzvGww1J64K2jwfiP6cT2dsWWxu8mXcTOL1GG9xjkFxrC0zXRwOwvBfKpxaFJ4YCVBFoAEOJnRGyPUpQl-VEVb6nPb5V715h41NHnPeoxcXT2OaLfZW74ynyRRravWIEQXEsY0CnbO023a4GgWNBjBolPE0CYKuO1cvPj2e2cyhcgjIIwAMTJLDDYjk');">
+                    </div>
+                    <div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity"
+                        data-alt="Instagram post thumbnail happy client"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC1jECFlX2FOmKft5kh4Cu-8OvnTipekOVfyYeUG4yv-ywffn9mS3k5hDUtWTekynguqHUNKVNfTUdKIw5UhJ_gXyChLHTSuLkuvsSGlm8yT2F_HwX8OYLdrrTEjCX58VWooMQqZcAY25XGnx3YNC4WgNSARdKruaN_dus0J2z5B3LGp6VJaSc-LnmVvXR6PCnS_Zzw75FcSl84vLvH82MExc4OuHkFJ1XXUm2jHeU-RvMb8T23SC4Vqh3_zW9mWrt2mBm9fAeMYYw');">
+                    </div>
+                    <div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity"
+                        data-alt="Instagram post thumbnail physiotherapy"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0In0u9d2HkZMr8EjmZJRVSYtY0Tm9bDqVR71anS8a_9Q-YSSuZfaEf1Ofh5jW8JgpRqEX7iVJymt3opP1kCCM-hXIC0-zBGB2OwyWGh1nXNY6R51bdxwJWC08kRyWQCoN5iKviHk0zp82ZYgp3xdScfkeZraJ-Mv8hiJ1etqyfRg1h5bXE62OoGr77Mdjmb-3DSD6AdHHUctXhMFTYtKK27EuNXwA-tWjYEioScuUz9XUqc5XnqTGMKGpT6UF-nGtyya0Y9kfqF4');">
+                    </div>
+                    <div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity"
+                        data-alt="Instagram post thumbnail equipment detail"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-GgG5-fU2ArYxXNwe3vbB8-M_4VAJoCvO9GawixWRt1mJh90VrbKKpxH2IQVin3ZB7l1qVCnDZsmko7ppyodaLvBKigzMdaS2-8KHBnwjH0vZNxp-GgMLgJLUHJa49ByI1rKgJLOo4BfZE-2bIOtXG5xzzUxzjeRPAhBOUHlf0XJMqISG4JE5WR8mcv28bhet8409tnFgUDEMqLpgscDxFxIU2ly2rAtvXg5VS1ahsimqXLtFnhfeWAwKezFvNULvJ6k-PtLNyxw');">
+                    </div>
+                    <div class="aspect-square bg-neutral-800 rounded bg-cover bg-center cursor-pointer hover:opacity-80 transition-opacity"
+                        data-alt="Instagram post thumbnail advanced move"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDLMflNWY8514RCNNPN-o2PewRBp_X5-RJ-ii3h_zASSE7yPcoGitsveYMswRMz0Qxk58sIRiAgkkejiGX5fO8NU64WkMYOk2dvEz0e0Q6Xt2AlK-D91NQalPK6LaOtZNnlkB88gcUyyXI9-WARAU61kpZ-mRD5ALWq7J11_NZQNdqDL0nS5O7ZqFmMANWAQyXldyrRfwjHjGoJozIbUOcxCYS2IjkQTqq3_Idi24N555b3tcPhVgqBGe-tR8C8UNBBeGlsOBjzbuE');">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto px-6 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-neutral-500">
+            <p>© 2023 Studio RL. Todos os direitos reservados.</p>
+            <p class="mt-2 md:mt-0">Design by AI</p>
+        </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <a aria-label="Contact on WhatsApp"
+        class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg shadow-black/20 transition-all hover:-translate-y-1 flex items-center justify-center group"
+        href="https://wa.me/5583999999999" target="_blank">
+        <svg class="bi bi-whatsapp w-6 h-6" fill="currentColor" height="24" viewbox="0 0 16 16" width="24"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z">
+            </path>
+        </svg>
+        <span
+            class="absolute right-full mr-3 bg-white text-black px-3 py-1 rounded-lg text-sm font-medium shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Fale
+            Conosco</span>
+    </a>
+</body>
+
+</html>
