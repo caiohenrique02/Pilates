@@ -17,6 +17,10 @@
         rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/pt.js"></script>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -262,59 +266,9 @@
                     <h2 class="text-3xl font-display mb-6">Agende sua Sessão</h2>
                     <p class="text-neutral-600 dark:text-neutral-400 mb-8">Selecione o melhor horário para sua avaliação
                         ou aula experimental.</p>
-                    <!-- Simplified Calendar UI -->
-                    <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm">
-                        <div class="flex justify-between items-center mb-6">
-                            <span class="font-bold text-lg">Outubro 2023</span>
-                            <div class="flex gap-2">
-                                <button class="p-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-full"><span
-                                        class="material-symbols-outlined text-sm">chevron_left</span></button>
-                                <button class="p-1 hover:bg-neutral-100 dark:hover:bg-neutral-700 rounded-full"><span
-                                        class="material-symbols-outlined text-sm">chevron_right</span></button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-sm mb-2 text-text-muted">
-                            <div>D</div>
-                            <div>S</div>
-                            <div>T</div>
-                            <div>Q</div>
-                            <div>Q</div>
-                            <div>S</div>
-                            <div>S</div>
-                        </div>
-                        <div class="grid grid-cols-7 gap-2 text-center text-sm" id="calendarDays">
-                            <div class="p-2 text-neutral-300">29</div>
-                            <div class="p-2 text-neutral-300">30</div>
-                            <div onclick="selectDate(this, 1)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">1
-                            </div>
-                            <div onclick="selectDate(this, 2)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">2
-                            </div>
-                            <div onclick="selectDate(this, 3)"
-                                class="day-btn p-2 bg-primary text-text-main font-bold rounded-full shadow-md">3</div>
-                            <div onclick="selectDate(this, 4)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">4
-                            </div>
-                            <div onclick="selectDate(this, 5)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">5
-                            </div>
-                            <div onclick="selectDate(this, 6)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">6
-                            </div>
-                            <div onclick="selectDate(this, 7)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">7
-                            </div>
-                            <div onclick="selectDate(this, 8)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">8
-                            </div>
-                            <div onclick="selectDate(this, 9)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">9
-                            </div>
-                            <div onclick="selectDate(this, 10)"
-                                class="day-btn p-2 hover:bg-primary/20 rounded-full cursor-pointer transition-colors">10
-                            </div>
-                        </div>
+                    <!-- Flatpickr Calendar UI -->
+                    <div class="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-sm flex flex-col items-center">
+                        <input type="text" id="datePicker" class="hidden" placeholder="Selecione a data">
                     </div>
                 </div>
                 <div class="flex flex-col justify-center space-y-6">
@@ -453,41 +407,69 @@
             class="absolute right-full mr-3 bg-white text-black px-3 py-1 rounded-lg text-sm font-medium shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Fale
             Conosco</span>
     </a>
+    <style>
+        /* Custom Overrides for Flatpickr */
+        .flatpickr-calendar {
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+        }
+
+        .flatpickr-day.selected {
+            background: #EAB308 !important;
+            /* Tailwind Primary Yellow */
+            border-color: #EAB308 !important;
+        }
+    </style>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        let selectedDate = '3';
-        function selectDate(btn, date) {
-            selectedDate = date;
-
-            // Update calendar visual
-            document.querySelectorAll('.day-btn').forEach(b => {
-                b.classList.remove('bg-primary', 'text-text-main', 'font-bold', 'shadow-md');
-                b.classList.add('hover:bg-primary/20');
-            });
-            btn.classList.add('bg-primary', 'text-text-main', 'font-bold', 'shadow-md');
-            btn.classList.remove('hover:bg-primary/20');
-
-            // Update label
-            document.getElementById('dateLabel').innerText = `Horários Disponíveis (${date.toString().padStart(2, '0')}/10)`;
-
-            // Re-render time slots slightly differently to show dynamic behavior
-            const timeSlots = document.getElementById('timeSlots');
-            timeSlots.style.opacity = '0';
-            setTimeout(() => {
-                // Remove selected time if date changes
-                selectedTime = '';
-                document.querySelectorAll('.time-btn').forEach(b => {
-                    b.classList.remove('border-primary', 'bg-primary/10', 'text-primary', 'font-medium');
-                    b.classList.add('border-neutral-300', 'dark:border-neutral-600');
-                });
-                timeSlots.style.opacity = '1';
-            }, 300);
+        // Dynamic Calendar Logic
+        const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        let currentDate = new Date();
+        // Force the app to show the current month in 2026 based on the user request, or use the actual date if it's already >= 2026
+        if (currentDate.getFullYear() < 2026) {
+            currentDate.setFullYear(2026);
         }
+
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+        let selectedDate = '';
+        let selectedFullDate = ''; // Holds the full string like "15/05/2026"
+
+        // Initialize Flatpickr in Inline mode
+        flatpickr("#datePicker", {
+            inline: true,
+            locale: "pt",
+            minDate: "2026-01-01",
+            defaultDate: "2026-01-01",
+            onChange: function (selectedDates, dateStr, instance) {
+                selectedFullDate = dateStr;
+
+                // Update Label
+                document.getElementById('dateLabel').innerText = `Horários Disponíveis (${selectedFullDate})`;
+
+                // Reset time slots
+                const timeSlots = document.getElementById('timeSlots');
+                timeSlots.style.opacity = '0';
+                setTimeout(() => {
+                    selectedTime = '';
+                    document.querySelectorAll('.time-btn').forEach(b => {
+                        b.classList.remove('border-primary', 'bg-primary/10', 'text-primary', 'font-medium');
+                        b.classList.add('border-neutral-300', 'dark:border-neutral-600');
+                    });
+                    timeSlots.style.opacity = '1';
+                }, 300);
+            }
+        });
 
         let selectedTime = '';
         function selectTime(btn, time) {
+            if (!selectedFullDate) {
+                alert("Por favor, selecione uma data no calendário primeiro.");
+                return;
+            }
             selectedTime = time;
             document.querySelectorAll('.time-btn').forEach(b => {
                 b.classList.remove('border-primary', 'bg-primary/10', 'text-primary', 'font-medium');
@@ -500,11 +482,11 @@
         function sendBooking() {
             const name = document.getElementById('bookingName').value;
             const phone = document.getElementById('bookingPhone').value;
-            if (!name || !phone || !selectedTime || !selectedDate) {
+            if (!name || !phone || !selectedTime || !selectedFullDate) {
                 alert('Por favor, preencha seu nome, telefone e escolha uma data e horário.');
                 return;
             }
-            const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedDate.toString().padStart(2, '0')}/10*, no horário de *${selectedTime}*. Meu contato é ${phone}.`;
+            const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedFullDate}*, no horário de *${selectedTime}*. Meu contato é ${phone}.`;
             window.open(`https://wa.me/5583999999999?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
