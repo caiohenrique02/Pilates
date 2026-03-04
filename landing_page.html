@@ -442,23 +442,29 @@
             <!-- Location -->
             <div>
                 <h4 class="text-lg font-bold mb-6 text-white">Localização</h4>
-                <div class="flex gap-3 mb-4">
+                <a href="https://www.google.com/maps/search/?api=1&query=Edifício+Canopus+Centro+Campina+Grande+PB"
+                    target="_blank" class="flex gap-3 mb-4 group cursor-pointer hover:text-primary transition-colors">
                     <span class="material-symbols-outlined text-primary mt-1">location_on</span>
-                    <p class="text-neutral-400 text-sm">
-                        Edifício Canoupus, Sala 402<br />
+                    <p class="text-neutral-400 text-sm group-hover:text-primary transition-colors">
+                        Edifício Canopus, Sala 402<br />
                         Centro, Campina Grande - PB
                     </p>
-                </div>
-                <!-- Map Placeholder -->
-                <div class="w-full h-32 bg-neutral-800 rounded-lg overflow-hidden relative">
-                    <div class="w-full h-full bg-cover bg-center opacity-70 hover:opacity-100 transition-opacity"
+                </a>
+                <!-- Map Link -->
+                <a href="https://www.google.com/maps/search/?api=1&query=Edifício+Canopus+Centro+Campina+Grande+PB"
+                    target="_blank"
+                    class="block w-full h-32 bg-neutral-800 rounded-lg overflow-hidden relative group cursor-pointer">
+                    <div class="w-full h-full bg-cover bg-center opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
                         data-location="Campina Grande"
                         style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0ZxFf3EEFAjxK1YvG8kbJJT8NAnyGVgS960OOFUnEgSMlLGjApro-cQ7WkIaRPpzNpeP5k8F6Uzp8OPpa0iwz35ahFbWoFBOi6SgSp4WjsCeJgGxYDkuBKfxytjqy50glk-wIANTWrkCc6W8MTfyQFrfw2VJAZi9ySGfsPJ8X3MaPaxU6M-r3nlMrT8MKefGwWe6GZ8Qndo52rKkMaD_hz8sqDkL6ZDSiDvcQfjcEjvdqM9dnG29w1cOJaVbea2zy-Y5_0V-WvMk');">
                     </div>
-                    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <span class="bg-neutral-900/80 px-3 py-1 text-xs rounded text-white">Ver no Mapa</span>
+                    <div
+                        class="absolute inset-0 flex items-center justify-center pointer-events-none group-hover:bg-black/20 transition-all">
+                        <span
+                            class="bg-neutral-900/90 px-4 py-2 text-xs font-bold rounded-full text-white border border-white/10 shadow-xl transform group-hover:scale-110 transition-all">ABRIR
+                            NO GOOGLE MAPS</span>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         <div
