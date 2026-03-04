@@ -470,6 +470,67 @@
             const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedFullDate}*, no horário de *${selectedTime}*. Meu contato é ${phone}.`;
             window.open(`https://wa.me/5583999999999?text=${encodeURIComponent(msg)}`, '_blank');
         }
+
+        // Service Data for Modals
+        const serviceData = {
+            'classico': {
+                title: 'Pilates Clássico',
+                icon: 'self_improvement',
+                image: 'pilates_classico.png',
+                desc: 'O método original criado por Joseph Pilates é focado na contrologia. O Pilates Clássico exige precisão, controle e fluidez. Utilizando equipamentos desenhados especificamente para isso, o método promove um alinhamento postural perfeito, ganho expressivo de força muscular, e flexibilidade incomparável.<br><br>Aqui no Studio RL, seguimos a tradição à risca para que você sinta todos os benefícios de um corpo em pleno funcionamento, forte e focado.'
+            },
+            'gestantes': {
+                title: 'Gestantes',
+                icon: 'pregnant_woman',
+                image: 'pilates_gestantes.png',
+                desc: 'Nosso programa voltado para gestantes oferece o suporte e o cuidado que essa fase tão mágica e delicada exige.<br><br>Focamos em exercícios que fortalecem o assoalho pélvico, aliviam dores lombares e melhoram a circulação, preparando o corpo tanto para o parto quanto para o período pós-parto, garantindo a sua saúde e a do bebê.'
+            },
+            'reabilitacao': {
+                title: 'Reabilitação',
+                icon: 'healing',
+                image: 'pilates_reabilitacao.png',
+                desc: 'Combinamos os princípios do Pilates com a expertise em fisioterapia para criar um ambiente seguro e 100% voltado para a sua recuperação.<br><br>Seja para tratar dores crônicas, recuperação pós-cirúrgica ou lesões articulares, nosso método devolve a funcionalidade e o controle corporal sem impacto.'
+            }
+        };
+
+        let currentServiceTitle = '';
+
+        function openServiceModal(serviceKey) {
+            const data = serviceData[serviceKey];
+            if(!data) return;
+
+            currentServiceTitle = data.title;
+            document.getElementById('modalTitle').innerText = data.title;
+            document.getElementById('modalIcon').innerText = data.icon;
+            document.getElementById('modalImage').style.backgroundImage = `url('${data.image}')`;
+            
+            document.getElementById('modalDescription').innerHTML = data.desc;
+
+            const modal = document.getElementById('serviceModal');
+            const content = document.getElementById('serviceModalContent');
+            
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            content.classList.remove('scale-95', 'translate-y-4');
+        }
+
+        function closeServiceModal() {
+            const modal = document.getElementById('serviceModal');
+            const content = document.getElementById('serviceModalContent');
+            
+            content.classList.add('scale-95', 'translate-y-4');
+            modal.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function handleModalClick(e) {
+            if(e.target.id === 'serviceModal') {
+                closeServiceModal();
+            }
+        }
+
+        function sendModalWhatsApp() {
+            const msg = `Olá, Dra. Rhaisa! Tudo bem? Gostaria de saber mais sobre *${currentServiceTitle}*.`;
+            window.open(`https://wa.me/5583999999999?text=${encodeURIComponent(msg)}`, '_blank');
+        }
     </script>
 
     <!-- Service Modal Backdrop -->
