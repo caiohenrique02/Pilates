@@ -244,12 +244,15 @@
                         <!-- Sem margens exageradas para caber o iframe 100% -->
                         <div
                             class="w-full h-full rounded-[2.5rem] overflow-hidden bg-white flex items-center justify-center relative">
-                            <iframe src="https://www.instagram.com/reel/DU8m2gJkfrW/embed"
-                                class="absolute inset-0 w-full h-full border-0" frameborder="0" scrolling="no"
-                                allowtransparency="true" allowfullscreen></iframe>
+                            <!-- Instagram Embed -->
+                            <blockquote class="instagram-media w-full h-full m-0 p-0 absolute inset-0"
+                                data-instgrm-permalink="https://www.instagram.com/reel/DU8m2gJkfrW/"
+                                data-instgrm-version="14">
+                            </blockquote>
                         </div>
                     </div>
                 </div>
+            </div>
     </section>
 
     <!-- Services Section -->
@@ -669,6 +672,14 @@
         </div>
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
+    <script>
+        // Manually trigger Instagram embed processing to ensure it loads correctly
+        window.addEventListener('load', () => {
+            if (window.instgrm) {
+                window.instgrm.Embeds.process();
+            }
+        });
+    </script>
 </body>
 
 </html>
