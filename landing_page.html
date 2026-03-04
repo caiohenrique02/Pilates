@@ -243,12 +243,19 @@
                         class="absolute inset-0 w-full h-full bg-black rounded-[2.8rem] overflow-hidden flex items-center justify-center border-4 border-black">
                         <!-- Sem margens exageradas para caber o iframe 100% -->
                         <div
-                            class="w-full h-full rounded-[2.5rem] overflow-hidden bg-white flex items-center justify-center relative">
-                            <!-- Instagram Embed -->
-                            <blockquote class="instagram-media w-full h-full m-0 p-0 absolute inset-0"
-                                data-instgrm-permalink="https://www.instagram.com/reel/DU8m2gJkfrW/"
-                                data-instgrm-version="14" data-instgrm-captioned="false">
-                            </blockquote>
+                            class="w-full h-full rounded-[2.5rem] overflow-hidden bg-white relative flex items-center justify-center">
+                            <!-- Scaling Hack: Trick Instagram into thinking it's a wider screen to avoid the "Watch on Instagram" overlay -->
+                            <div
+                                class="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden">
+                                <div class="w-[150%] h-[150%] flex-shrink-0"
+                                    style="transform: scale(0.666); transform-origin: center;">
+                                    <iframe src="https://www.instagram.com/reel/DU8m2gJkfrW/embed/"
+                                        class="w-full h-full border-0" frameborder="0" scrolling="no"
+                                        allowtransparency="true"
+                                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
