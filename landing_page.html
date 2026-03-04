@@ -216,58 +216,61 @@
             </div>
 
             <div class="lg:w-1/2 flex justify-center lg:justify-end w-full">
-                <!-- Wrapper for exactly 9:16 aspect ratio -->
-                <!-- iPhone Mockup Frame -->
-                <div
-                    class="relative w-full max-w-[380px] aspect-[9/16] bg-slate-400 rounded-[3.5rem] shadow-[0_30px_70px_rgba(0,0,0,0.6)] border-[14px] border-slate-500 group">
+                <!-- iPhone Mockup Frame (Sleek & Precise) -->
+                <div class="relative w-full max-w-[320px] aspect-[9/19] group" data-aos="zoom-in">
 
-                    <!-- Simples Speaker/Camera (Sem Notch gigante pra não tampar o Header) -->
-                    <div class="absolute top-0 inset-x-0 h-4 flex justify-center z-50">
-                        <div
-                            class="w-16 h-4 bg-slate-800 rounded-b-xl mt-[1px] relative z-20 flex items-center justify-center gap-2">
-                            <div class="w-1.5 h-1.5 rounded-full bg-slate-600"></div>
-                            <div class="w-6 h-1 rounded-full bg-slate-900 border border-slate-700/50"></div>
-                        </div>
+                    <!-- Outer Metallic Frame -->
+                    <div
+                        class="absolute inset-0 bg-slate-800 rounded-[3rem] shadow-[0_40px_100px_rgba(0,0,0,0.7)] ring-[8px] ring-slate-700/40 z-0">
                     </div>
 
-                    <!-- Buttons (Left) bg-slate-600 p/ contraste na borda 500 -->
-                    <div class="absolute -left-[16px] top-28 w-[2px] h-8 bg-slate-600 rounded-l-md"></div>
-                    <div class="absolute -left-[16px] top-40 w-[2px] h-14 bg-slate-600 rounded-l-md"></div>
-                    <div class="absolute -left-[16px] top-60 w-[2px] h-14 bg-slate-600 rounded-l-md"></div>
+                    <!-- Buttons -->
+                    <div class="absolute -left-1 top-24 w-1.5 h-8 bg-slate-600 rounded-l-md z-10"></div>
+                    <div class="absolute -left-1 top-36 w-1.5 h-12 bg-slate-600 rounded-l-md z-10"></div>
+                    <div class="absolute -right-1 top-40 w-1.5 h-16 bg-slate-600 rounded-r-md z-10"></div>
 
-                    <!-- Button (Right) bg-slate-600 -->
-                    <div class="absolute -right-[16px] top-40 w-[2px] h-20 bg-slate-600 rounded-r-md"></div>
-
-                    <!-- Inner Bezel & Screen/Iframe Container -->
+                    <!-- Screen Area -->
                     <div
-                        class="absolute inset-0 w-full h-full bg-black rounded-[2.8rem] overflow-hidden flex items-center justify-center border-4 border-black">
-                        <!-- Sem margens exageradas para caber o iframe 100% -->
-                        <div
-                            class="w-full h-full rounded-[3.5rem] overflow-hidden bg-black relative flex items-center justify-center">
-                            <video id="studioVideo" class="w-full h-full object-cover" autoplay loop muted playsinline>
-                                <source src="video_pilates.mp4" type="video/mp4">
-                                Seu navegador não suporta vídeos.
-                            </video>
+                        class="absolute inset-[6px] bg-black rounded-[2.6rem] overflow-hidden border-[4px] border-black z-20 flex items-center justify-center">
+                        <video id="studioVideo" class="w-full h-full object-cover" autoplay loop muted playsinline>
+                            <source src="video_pilates.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
 
-                            <!-- Custom Controls Overlay -->
-                            <div class="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-b from-black/40 via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 cursor-pointer"
-                                onclick="togglePlay()">
-                                <div class="flex justify-end">
-                                    <button id="muteBtn" onclick="toggleMute(event)"
-                                        class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30 hover:bg-white/40 transition-all">
-                                        <span class="material-symbols-outlined text-xl">volume_off</span>
-                                    </button>
+                        <!-- Dynamic Island (Notch) -->
+                        <div class="absolute top-3 inset-x-0 flex justify-center pointer-events-none">
+                            <div class="w-24 h-6 bg-black rounded-full flex items-center justify-center gap-2 px-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-[#1a1c1e]"></div>
+                                <div class="w-8 h-1 bg-[#1a1c1e] rounded-full"></div>
+                            </div>
+                        </div>
+
+                        <!-- Premium UI Controls -->
+                        <div class="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-b from-black/60 via-transparent to-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 cursor-pointer"
+                            onclick="togglePlay()">
+                            <div class="flex justify-end">
+                                <button id="muteBtn" onclick="toggleMute(event)"
+                                    class="w-10 h-10 rounded-full bg-black/20 backdrop-blur-xl flex items-center justify-center text-white border border-white/10 hover:bg-black/40 transition-all">
+                                    <span class="material-symbols-outlined text-xl">volume_off</span>
+                                </button>
+                            </div>
+
+                            <div class="flex flex-col items-center gap-4">
+                                <div id="playIcon"
+                                    class="w-16 h-16 rounded-full bg-primary/90 backdrop-blur-md flex items-center justify-center text-text-main shadow-2xl transform scale-90 group-hover:scale-100 transition-all duration-300">
+                                    <span class="material-symbols-outlined text-4xl">pause</span>
                                 </div>
-                                <div class="flex flex-col items-center gap-2">
-                                    <div id="playIcon"
-                                        class="w-16 h-16 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-text-main shadow-xl transform scale-90 group-hover:scale-100 transition-all">
-                                        <span class="material-symbols-outlined text-4xl">pause</span>
-                                    </div>
-                                    <span
-                                        class="text-white text-xs font-medium uppercase tracking-widest drop-shadow-md">Toque
-                                        para pausar</span>
+                                <div class="text-center">
+                                    <p
+                                        class="text-white text-[10px] font-bold uppercase tracking-[0.2em] drop-shadow-lg">
+                                        Studio RL</p>
+                                    <p class="text-white/60 text-[9px] uppercase tracking-widest mt-1">Toque para pausar
+                                    </p>
                                 </div>
-                                <div class="h-1 w-full bg-white/20 rounded-full overflow-hidden">
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="h-[3px] w-full bg-white/10 rounded-full overflow-hidden">
                                     <div id="videoProgress" class="h-full bg-primary w-0 transition-all duration-100">
                                     </div>
                                 </div>
@@ -276,6 +279,7 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Services Section -->
