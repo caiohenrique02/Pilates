@@ -243,17 +243,33 @@
                         class="absolute inset-0 w-full h-full bg-black rounded-[2.8rem] overflow-hidden flex items-center justify-center border-4 border-black">
                         <!-- Sem margens exageradas para caber o iframe 100% -->
                         <div
-                            class="w-full h-full rounded-[2.5rem] overflow-hidden bg-white relative flex items-center justify-center">
-                            <!-- Scaling Hack: Trick Instagram into thinking it's a wider screen to avoid the "Watch on Instagram" overlay -->
-                            <div
-                                class="absolute inset-0 w-full h-full flex items-center justify-center overflow-hidden">
-                                <div class="w-[150%] h-[150%] flex-shrink-0"
-                                    style="transform: scale(0.666); transform-origin: center;">
-                                    <iframe src="https://www.instagram.com/reel/DU8m2gJkfrW/embed/"
-                                        class="w-full h-full border-0" frameborder="0" scrolling="no"
-                                        allowtransparency="true"
-                                        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                                        allowfullscreen></iframe>
+                            class="w-full h-full rounded-[3.5rem] overflow-hidden bg-black relative flex items-center justify-center">
+                            <video id="studioVideo" class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="video_pilates.mp4" type="video/mp4">
+                                Seu navegador não suporta vídeos.
+                            </video>
+
+                            <!-- Custom Controls Overlay -->
+                            <div class="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-b from-black/40 via-transparent to-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 cursor-pointer"
+                                onclick="togglePlay()">
+                                <div class="flex justify-end">
+                                    <button id="muteBtn" onclick="toggleMute(event)"
+                                        class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30 hover:bg-white/40 transition-all">
+                                        <span class="material-symbols-outlined text-xl">volume_off</span>
+                                    </button>
+                                </div>
+                                <div class="flex flex-col items-center gap-2">
+                                    <div id="playIcon"
+                                        class="w-16 h-16 rounded-full bg-primary/80 backdrop-blur-md flex items-center justify-center text-text-main shadow-xl transform scale-90 group-hover:scale-100 transition-all">
+                                        <span class="material-symbols-outlined text-4xl">pause</span>
+                                    </div>
+                                    <span
+                                        class="text-white text-xs font-medium uppercase tracking-widest drop-shadow-md">Toque
+                                        para pausar</span>
+                                </div>
+                                <div class="h-1 w-full bg-white/20 rounded-full overflow-hidden">
+                                    <div id="videoProgress" class="h-full bg-primary w-0 transition-all duration-100">
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -680,11 +696,38 @@
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
     <script>
-        // Manually trigger Instagram embed processing to ensure it loads correctly
-        window.addEventListener('load', () => {
-            if (window.instgrm) {
-                window.instgrm.Embeds.process();
+        const video = document.getElementById('studioVideo');
+        const muteBtn = document.getElementById('muteBtn');
+        const playIcon = document.getElementById('playIcon');
+        const progress = document.getElementById('videoProgress');
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playIcon.innerHTML = '<span class="material-symbols-outlined text-4xl">pause</span>';
+            } else {
+                video.pause();
+                playIcon.innerHTML = '<span class="material-symbols-outlined text-4xl">play_arrow</span>';
             }
+        }
+
+        function toggleMute(e) {
+            e.stopPropagation();
+            video.muted = !video.muted;
+            muteBtn.innerHTML = `<span class="material-symbols-outlined text-xl">${video.muted ? 'volume_off' : 'volume_up'}</span>`;
+        }
+
+        video.addEventListener('timeupdate', () => {
+            const percentage = (video.currentTime / video.duration) * 100;
+            progress.style.width = percentage + '%';
+        });
+
+        // Autoplay verification
+        window.addEventListener('load', () => {
+            video.play().catch(error => {
+                console.log("Autoplay blocked by browser", error);
+                playIcon.innerHTML = '<span class="material-symbols-outlined text-4xl">play_arrow</span>';
+            });
         });
     </script>
 </body>
