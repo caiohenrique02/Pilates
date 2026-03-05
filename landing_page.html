@@ -81,7 +81,7 @@
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="#services">Serviços</a>
                 <a class="text-sm font-medium hover:text-primary transition-colors" href="#booking">Agendar</a>
             </div>
-            <a href="contato.html"
+            <a href="#booking"
                 class="bg-primary hover:bg-primary-dark text-text-main font-bold py-2 px-6 rounded-full text-sm transition-colors shadow-lg shadow-primary/20">
                 Agendar Agora
             </a>
@@ -112,7 +112,7 @@
                     onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
                     Conheça o Studio
                 </button>
-                <a href="contato.html"
+                <a href="#booking"
                     class="bg-primary hover:bg-white text-text-main px-8 py-3 rounded-full text-lg font-bold transition-all shadow-xl shadow-black/20 text-center">
                     Agendar Sessão
                 </a>
@@ -402,11 +402,6 @@
                                 class="w-full bg-transparent border-b border-neutral-300 dark:border-neutral-600 py-3 focus:outline-none focus:border-primary text-text-main dark:text-neutral-light placeholder-neutral-400"
                                 placeholder="Seu Nome" type="text" />
                         </div>
-                        <div>
-                            <input id="bookingPhone"
-                                class="w-full bg-transparent border-b border-neutral-300 dark:border-neutral-600 py-3 focus:outline-none focus:border-primary text-text-main dark:text-neutral-light placeholder-neutral-400"
-                                placeholder="WhatsApp / Telefone" type="tel" />
-                        </div>
                         <button type="button" onclick="sendBooking()"
                             class="w-full bg-primary hover:bg-primary-dark text-text-main font-bold py-3 rounded-lg shadow-lg shadow-primary/20 transition-all mt-4 block text-center cursor-pointer">
                             Confirmar Agendamento pelo WhatsApp
@@ -560,12 +555,11 @@
 
         function sendBooking() {
             const name = document.getElementById('bookingName').value;
-            const phone = document.getElementById('bookingPhone').value;
-            if (!name || !phone || !selectedTime || !selectedFullDate) {
-                alert('Por favor, preencha seu nome, telefone e escolha uma data e horário.');
+            if (!name || !selectedTime || !selectedFullDate) {
+                alert('Por favor, preencha seu nome e escolha uma data e horário.');
                 return;
             }
-            const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedFullDate}*, no horário de *${selectedTime}*. Meu contato é ${phone}.`;
+            const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedFullDate}*, no horário de *${selectedTime}*. Você tem esse horário disponível?`;
             window.open(`https://wa.me/558391053471?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
