@@ -595,17 +595,19 @@
 
         function openServiceModal(serviceKey) {
             const data = serviceData[serviceKey];
-             if (!data) return;
+            if (!data) return;
 
             currentServiceTitle = data.title;
             document.getElementById('modalTitle').innerText = data.title;
             document.getElementById('modalIcon').innerText = data.icon;
-            document.getElementById('modalImage').style.backgroundImage = `url('${data.image}')    document.getElementById('modalDescription').innerHTML = data.desc;
+            document.getElementById('modalImage').style.backgroundImage = `url('${data.image}')`;
+
+            document.getElementById('modalDescription').innerHTML = data.desc;
 
             const modal = document.getElementById('serviceModal');
             const content = document.getElementById('serviceModalContent');
 
-        assList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
             content.classList.remove('scale-95', 'translate-y-4');
         }
 
@@ -613,12 +615,12 @@
             const modal = document.getElementById('serviceModal');
             const content = document.getElementById('serviceModalContent');
 
-            content.d('scale-95', 'translate-y-4');
+            content.classList.add('scale-95', 'translate-y-4');
             modal.classList.add('opacity-0', 'pointer-events-none');
         }
 
         function handleModalClick(e) {
-            if (e.target.id === 'serviceModal')  {
+            if (e.target.id === 'serviceModal') {
                 closeServiceModal();
             }
         }
@@ -672,7 +674,7 @@
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
     <script>
-        const video =nt.getElementById('studioVideo');
+        const video = document.getElementById('studioVideo');
         const muteBtn = document.getElementById('muteBtn');
         const playIcon = document.getElementById('playIcon');
         const progress = document.getElementById('videoProgress');
