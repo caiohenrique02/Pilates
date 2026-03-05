@@ -475,7 +475,7 @@
     <!-- Floating WhatsApp Button -->
     <a aria-label="Contact on WhatsApp"
         class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20bd5a] text-white p-4 rounded-full shadow-lg shadow-black/20 transition-all hover:-translate-y-1 flex items-center justify-center group"
-        href="https://wa.me/558391053471" target="_blank">
+        href="https://wa.me/5583999999999" target="_blank">
         <svg class="bi bi-whatsapp w-6 h-6" fill="currentColor" height="24" viewbox="0 0 16 16" width="24"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -566,7 +566,7 @@
                 return;
             }
             const msg = `Olá, Studio RL! Me chamo *${name}* e gostaria de agendar uma avaliação. Gostaria do dia *${selectedFullDate}*, no horário de *${selectedTime}*. Meu contato é ${phone}.`;
-            window.open(`https://wa.me/558391053471?text=${encodeURIComponent(msg)}`, '_blank');
+            window.open(`https://wa.me/5583999999999?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         // Service Data for Modals
@@ -595,17 +595,19 @@
 
         function openServiceModal(serviceKey) {
             const data = serviceData[serviceKey];
-             if (!data) return;
+            if (!data) return;
 
             currentServiceTitle = data.title;
             document.getElementById('modalTitle').innerText = data.title;
             document.getElementById('modalIcon').innerText = data.icon;
-            document.getElementById('modalImage').style.backgroundImage = `url('${data.image}')    document.getElementById('modalDescription').innerHTML = data.desc;
+            document.getElementById('modalImage').style.backgroundImage = `url('${data.image}')`;
+
+            document.getElementById('modalDescription').innerHTML = data.desc;
 
             const modal = document.getElementById('serviceModal');
             const content = document.getElementById('serviceModalContent');
 
-        assList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-0', 'pointer-events-none');
             content.classList.remove('scale-95', 'translate-y-4');
         }
 
@@ -613,19 +615,19 @@
             const modal = document.getElementById('serviceModal');
             const content = document.getElementById('serviceModalContent');
 
-            content.d('scale-95', 'translate-y-4');
+            content.classList.add('scale-95', 'translate-y-4');
             modal.classList.add('opacity-0', 'pointer-events-none');
         }
 
         function handleModalClick(e) {
-            if (e.target.id === 'serviceModal')  {
+            if (e.target.id === 'serviceModal') {
                 closeServiceModal();
             }
         }
 
         function sendModalWhatsApp() {
             const msg = `Olá, Dra. Rhaisa! Tudo bem? Gostaria de saber mais sobre *${currentServiceTitle}*.`;
-            window.open(`https://wa.me/558391053471?text=${encodeURIComponent(msg)}`, '_blank');
+            window.open(`https://wa.me/5583999999999?text=${encodeURIComponent(msg)}`, '_blank');
         }
     </script>
 
@@ -672,7 +674,7 @@
     </div>
     <script async src="//www.instagram.com/embed.js"></script>
     <script>
-        const video =nt.getElementById('studioVideo');
+        const video = document.getElementById('studioVideo');
         const muteBtn = document.getElementById('muteBtn');
         const playIcon = document.getElementById('playIcon');
         const progress = document.getElementById('videoProgress');
